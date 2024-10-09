@@ -12,7 +12,10 @@ let textPermitted = false;
 function readStorage(){
     const storedKeys = Object.keys(localStorage); // Skapa en array med alla Web Storage nycklar
 
-    storedKeys.reverse().forEach((key) => { // Loopa igenom all data i Web Storage och skapa DOM objekt, .reverse() ser till att ordningen inte ändras
+    storedKeys.sort((key1, key2) => { // Sortera nycklarna efter numeriskt värde(tid den skapades) genom att jämföra två värden i taget
+        return key1 - key2;
+    });
+    storedKeys.forEach((key) => { // Loopa igenom all data i Web Storage och skapa DOM objekt
         const storedData = localStorage.getItem(key);
         addItem(key, storedData);
     });
@@ -64,4 +67,3 @@ addEventListener("load", readStorage);
 inputField.addEventListener("keyup", checkLength);
 addButton.addEventListener("click", writeStorage);
 clearButton.addEventListener("click", clearStorage);
-
