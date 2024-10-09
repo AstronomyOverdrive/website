@@ -1,0 +1,190 @@
+body {
+    margin: 0; /* Remove gap around body */
+}
+main {  
+    font-family: sans-serif;
+}
+ul { /* Remove bulletpoint and indent from list items */
+    list-style-type: none;
+    padding: 0;
+}
+.grid-container {
+    max-width: 1600px; /* Lock grid sizing for viewports wider than 1600px */
+    display: grid; /* Display <main> as a grid */
+}
+
+/* Upper right grid element */
+#upper-right {
+    background: #2F80ED;
+    border-radius: 0 0 0 50%; /* Round bottom-left corner */
+    grid-area: upper-right; /* Define name for grid placement */
+    aspect-ratio: 5/4; /* Lock element height/width to 5:4 aspect ratio */
+}
+#upper-right > div {
+    width: 60%;
+    margin-left: 20%;
+    height: 80%;
+    margin-top: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw; /* Responsive font sizing for viewports under 1600px width */
+    line-height: 1.8;
+}
+
+/* Upper left grid element */
+#upper-left {
+    grid-area: upper-left; /* Define name for grid placement */
+    aspect-ratio: 5/4; /* Lock element height/width to 5:4 aspect ratio */
+}
+#upper-left > img {
+    max-width: 10%; /* Stop logo from displaying larger than 10% */
+    height: auto; /* Maintain aspect ratio when resizing */
+    margin: 2%;
+}
+#upper-left > section {
+    max-width: 70%;
+    margin-left: 15%;
+}
+#upper-left > section > h1 {
+    font-size: 3vw; /* Responsive font sizing for viewports under 1600px width */
+}
+#upper-left > section > p {
+    line-height: 1.5;
+    font-size: 1.5vw; /* Responsive font sizing for viewports under 1600px width */
+    color: dimgrey;
+}
+
+/* Image container grid element */
+/* Define names for grid placement */
+#img1 {
+    grid-area:img1;
+}
+#img2 {
+    grid-area:img2;
+}
+#img3 {
+    grid-area:img3;
+}
+#img4 {
+    grid-area:img4;
+}
+.img-container {
+    aspect-ratio: 1/1; /* Lock element height/width to 1:1 aspect ratio */
+}
+.img-container > img {
+    object-fit: cover; /* Crop images into squares */
+    width: 60%;
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 20%;
+    border-radius: 20%; /* Round corners for viewports over 600px */
+}
+
+/* Lower left grid element */
+#lower-left {
+    grid-area: lower-left; /* Define name for grid placement */
+    aspect-ratio: 5/2; /* Lock element height/width to 5:2 aspect ratio */
+}
+#lower-left > section {
+    background: #E0ECFD;
+    height: 90%;
+    width: 75%;
+    border-radius: 0 5vw 5vw 0; /* Round the two right corners */
+}
+#lower-left > section > h1 {
+    font-size: 3vw; /* Responsive font sizing for viewports under 1600px width */
+    color: #2F80ED;
+    margin: 0;
+    font-weight: normal;
+    margin-left: 10%;
+    padding-top: 5%;
+}
+#lower-left > section > ul{
+    font-size: 1.4vw; /* Responsive font sizing for viewports under 1600px width */
+    line-height: 1.7;
+    margin-left: 10%;
+}
+
+/* Footer */
+footer {
+    background: #2F80ED;
+    grid-area: footer; /* Define name for grid placement */
+    aspect-ratio: 8/1; /* Lock element height/width to 8:1 aspect ratio */
+}
+footer > p {
+    color: white;
+    font-size: 1.5vw; /* Responsive font sizing for viewports under 1600px width */
+    line-height: 1.5;
+    margin-left: 5%;
+    height: 50%;
+    margin-top: 4%;
+}
+
+/* Responsive design */
+@media only screen and (min-width: 1024px) { /* Sets up grid for viewports over 1024px */
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: "upper-left upper-left upper-right upper-right"
+        "img1 img2 img3 img4"
+        "lower-left lower-left lower-left lower-left"
+        "footer footer footer footer";
+    }
+}
+@media only screen and (max-width: 1024px) { /* Sets up grid for viewports under 600px */
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: "upper-left upper-right"
+        "img1 img2"
+        "img3 img4"
+        "lower-left lower-left"
+        "footer footer";
+    }
+}
+@media only screen and (max-width: 600px) { /* Sets up grid for viewports under 600px */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: "upper-left"
+        "lower-left"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "footer";
+    }
+    .img-container > img { /* Remove rounded corners and increase the size of images */
+        border-radius: 0;
+        height: 80%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    #upper-right {
+        display: none; /* Hide the upper right grid element */
+    }
+    #upper-left {
+        aspect-ratio: 2/1; /* Lock element height/width to 2:1 aspect ratio */
+    }
+    #lower-left {
+        aspect-ratio: 2/1; /* Lock element height/width to 2:1 aspect ratio */
+    }
+    #upper-left > section > p, footer > p {
+        font-size: 3vw; /* Responsive font sizing for viewports under 600px width */
+        margin: 0;
+    }
+    #lower-left > section > ul{
+        font-size: 2vw; /* Responsive font sizing for viewports under 600px width */
+    }
+}
+@media only screen and (min-width: 1600px) { /* Lock font sizes when the viewport is wider than 1600 */
+    #upper-left > section > p, #upper-right > div, footer > p {
+        font-size: 24px;
+    }
+    #upper-left > section > h1, #lower-left > section > h1 {
+        font-size: 48px;
+    }
+    #lower-left > section > ul {
+        font-size: 22px;
+    }
+}
