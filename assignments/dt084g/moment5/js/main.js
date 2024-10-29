@@ -20,7 +20,7 @@ let currentURL;
 
 // Define functions
 function getStations(){
-    fetch('http://api.sr.se/api/v2/channels?pagination=false&format=json') // Get all channels from SR on one page and in JSON format
+    fetch('https://api.sr.se/api/v2/channels?pagination=false&format=json') // Get all channels from SR on one page and in JSON format
     .then(response => response.json())
     .then(data => {
         initialData(data);
