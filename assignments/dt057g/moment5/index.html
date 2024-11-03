@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AmusGameStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/main.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.webp">
+    <script src="script/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="./">AmusGameStore</a></h1>
+        <label for="menu" id="menu-label">Menu</label>
+        <input type="checkbox" id="menu" name="menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="profile.html">Account</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="./">Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Trending:</h2>
+            <!-- Mobile only -->
+            <div class="carousel-container">
+                <button onclick="cycleList(true)" class="btn-left">&lt;</button>
+                <button onclick="cycleList(false)" class="btn-right">&gt;</button>
+                <a href="order.html" title="Add game to cart"><div class="img-container carousel" id="carousel"></div></a>
+            </div>
+            <!-- Tablets and computers -->
+            <div class="grid-container">
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img1"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img2"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img3"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img4"></div></a>
+            </div>
+        </section>
+        <section>
+            <h2>About AmusGameStore:</h2>
+            <p>
+                AmusGameStore was founded by <em>Shivering Game Studios</em> after the founder, Sir O'Gorath, read about the <a target="_blank" href="https://www.stopkillinggames.com/">Stop Killing Games</a> initiative.<br>
+                Our goal is to provide a way for people to actually own the games they buy and not just licenses like with most other stores.<br>
+                For our customers this means that no one can revoke their ownership of the games they buy from us.<br>
+                This also means that they no longer have to stay connected to the internet to play a game that they've paid money for.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <strong>© 2024 AmusGameStore</strong><br>
+            Follow us on <a target="_blank" href="https://joinmastodon.org/">Mastodon</a>
+        </div>
+    </footer>
+</body>
+
+</html>

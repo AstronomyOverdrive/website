@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Store - AmusGameStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/main.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.webp">
+    <script src="script/main.js" defer></script>
+    <style>
+        /* Page specific CSS, directly in header to cut down on http requests */
+        .img-missing {
+            background-position: 0%; /* Image position for missing thumbnail in sprite sheet */
+            outline: 2px solid white;
+        }
+        
+        @media only screen and (min-width: 600px) { /* Change size on viewports wider than 600px */
+            .img-missing {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="./">AmusGameStore</a></h1>
+        <label for="menu" id="menu-label">Menu</label>
+        <input type="checkbox" id="menu" name="menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="profile.html">Account</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="./">Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Roleplaying Games:</h2>
+            <!-- Mobile only -->
+            <div class="carousel-container">
+                <button onclick="cycleList(true)" class="btn-left">&lt;</button>
+                <button onclick="cycleList(false)" class="btn-right">&gt;</button>
+                <a href="order.html" title="Add game to cart"><div class="img-container carousel" id="carousel"></div></a>
+            </div>
+            <!-- Tablets and computers -->
+            <div class="grid-container">
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img1"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img2"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img3"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container" id="img4"></div></a>
+            </div>
+        </section>
+        <section>
+            <h2>Shooter Games:</h2>
+            <!-- Mobile only -->
+            <div class="carousel-container">
+                <button onclick="rotateImg(1)" class="btn-left">&lt;</button>
+                <button onclick="rotateImg(1)" class="btn-right">&gt;</button>
+                <a href="order.html" title="Add game to cart"><div id="shooters" class="img-container img-missing carousel"></div></a>
+            </div>
+            <!-- Tablets and computers -->
+            <div class="grid-container">
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+            </div>
+        </section>
+        <section>
+            <h2>Racing Games:</h2>
+            <!-- Mobile only -->
+            <div class="carousel-container">
+                <button onclick="rotateImg(2)" class="btn-left">&lt;</button>
+                <button onclick="rotateImg(2)" class="btn-right">&gt;</button>
+                <a href="order.html" title="Add game to cart"><div id="racing" class="img-container img-missing carousel"></div></a>
+            </div>
+            <!-- Tablets and computers -->
+            <div class="grid-container">
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+                <a href="order.html" title="Add game to cart"><div class="img-container img-missing"></div></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <strong>© 2024 AmusGameStore</strong><br>
+            Follow us on <a target="_blank" href="https://joinmastodon.org/">Mastodon</a>
+        </div>
+    </footer>
+</body>

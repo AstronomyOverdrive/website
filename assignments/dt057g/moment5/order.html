@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order - AmusGameStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/main.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.webp">
+    <style>
+        /* Page specific CSS, directly in header to cut down on http requests */
+        @font-face { /* Licensed under OFL, see full license at fonts/Micro5-OFL.txt */
+            font-family: 'Micro';
+            src: url('fonts/micro5-regular.ttf');
+        }
+        section {
+            text-align: center;
+        }
+        section > h2 { /* Mimic 8-bit console font */
+            font-size: 3em;
+            font-family: Micro;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="./">AmusGameStore</a></h1>
+        <label for="menu" id="menu-label">Menu</label>
+        <input type="checkbox" id="menu" name="menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="profile.html">Account</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="./">Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>THANK YOU BUYER!</h2>
+            <h2>BUT YOUR GAME IS IN<br>ANOTHER STORE!</h2>
+            <img src="img/amanita.webp" alt="Our mascot, an amanita muscaria">
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <strong>© 2024 AmusGameStore</strong><br>
+            Follow us on <a target="_blank" href="https://joinmastodon.org/">Mastodon</a>
+        </div>
+    </footer>
+</body>
+

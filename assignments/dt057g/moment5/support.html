@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Support - AmusGameStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/main.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.webp">
+    <style>
+        /* Page specific CSS, directly in header to cut down on http requests */
+        input { /* Style searchbar and button */
+            background: none;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        summary, label {
+            font-size: 1.3em;
+        }
+        details > p {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        .command { /* Style text consisting of commands */
+            font-family: monospace;
+            font-size: 1.3em;
+            font-weight: bold;
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="./">AmusGameStore</a></h1>
+        <label for="menu" id="menu-label">Menu</label>
+        <input type="checkbox" id="menu" name="menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="profile.html">Account</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="./">Homepage</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Does X work on linux?</h2>
+            <form id="searchbar" target="_blank" method="get" action="https://www.protondb.com/search">
+                <label for="q">Check linux compatibility:<br></label>
+                <input type="text" id="q" name="q" value="" placeholder="Enter game name">
+                <input type="submit" value="Search ProtonDB" class="form_buttons">
+            </form>
+        </section>
+        <!-- Fixes to common issues -->
+        <section>
+            <h2>Common issues:</h2>
+            <details>
+                <summary>Baldur's Gate 1/2 won't start [Linux]</summary>
+                <p>
+                    Download "libcrypto.so.1.0.0" & "libssl.so.1.0.0" and put them in a folder somwhere,
+                    then link to the folder in "start.sh" by adding the following line:<br>
+                    <span class="command">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/path/to/folder"</span>
+                </p>
+            </details>
+            <details>
+                <summary>Daggerfall falling through geometry [All]</summary>
+                <p>
+                    Physics in the DOS version of Daggerfall breaks at high cycle speeds, therefor do one of the following:<br>
+                    1: In DOSBox, enter the command <span class="command">cycles=50000</span>.<br>
+                    2: Install <a target="_blank" href="https://github.com/Interkarma/daggerfall-unity/wiki/Installing-Daggerfall-Unity-Cross-Platform">Daggerfall Unity</a>.
+                </p>
+            </details>
+            <details>
+                <summary>Gothic 2 "Access Violation" [All]</summary>
+                <p>
+                    Find the file "Gothic II/system/Gothic.ini" and change "musicEnabled" to 0.
+                </p>
+            </details>
+            <details>
+                <summary>The Sims 3 GPU at 100% [All]</summary>
+                <p>
+                    Force cap the framerate to 60 FPS using a tool like <a target="_blank" href="https://github.com/flightlessmango/MangoHud">MangoHUD</a> or <a target="_blank" href="https://apps.microsoft.com/detail/9nf8h0h7wmlt">NVIDIA Control Panel</a>.
+                </p>
+            </details>
+        </section>
+        <!-- Other issues -->
+        <section>
+            <h2>Still need help?</h2>
+            <p>
+                If you still need help feel free to contact us on Mastodon or ask in our Lemmy community!<br>
+                For game specific issues we also recommend appending "site:reddit.com" to your Google or Startpage searches.<br>
+                Also check for any potential game wiki sites.
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <div>
+            <strong>© 2024 AmusGameStore</strong><br>
+            Follow us on <a target="_blank" href="https://joinmastodon.org/">Mastodon</a>
+        </div>
+    </footer>
+</body>
