@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Om mig - Moment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div id="top-bar">
+            <a href="./"><img id="logo" src="images/logo.svg" alt="Logotyp"></a>
+            <button id="menu-btn">
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span id="btn-text">Meny</span>
+            </button>
+            <div id="darken-background" class="menu-open"></div>
+            <nav id="navigation">
+                <button id="close-btn" class="menu-open"><strong>X</strong>&nbsp;Stäng meny</button>
+                <ul>
+                    <li><a href="./">STARTSIDA</a></li>
+                    <li><a href="about.html">OM MIG</a></li>
+                    <li><a href="photos.html">BILDBEHANDLING</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="height: 80px; width: 100%;"></div>
+        <div id="header-img"></div>
+    </header>
+    <!-- Page-specific content -->
+    <main>
+        <h1>Om mig</h1>
+        <div id="flexbox-container">
+            <div id="flex-1">
+                <img src="images/portratt.png" alt="Bild på mig">
+            </div>
+            <div id="flex-2">
+                <section>
+                    <h2>William Pettersson</h2>
+                    <p>
+                        Tjo! Jag är 21 år gammal och bor i Köping.<br>
+                        Mina intressen inkluderar bland annat gitarrer, musik, dator-spel och programmering. Jag gillar även att promenera samt att chilla med katterna.<br>
+                        Jag har endast lekt runt lite med bildbehandling tidigare i enklare program så som <a target="_blank" href="https://www.getpaint.net/">Paint.NET</a>(innan jag bytte till Linux).
+                    </p>
+                </section>
+                <section>
+                    <h2>Om uppgiften</h2>
+                    <p>
+                        Uppgiften gick ut på att behandla diverse bilder på olika sätt samt att skapa en tillhörande webbplats baserad på en FIGMA design.<br>
+                        Jag tyckte att uppgiften var rolig och har lärt mig hur man använder masker för friläggning samt hur man handkolorerar.<br>
+                        Det enda som var lite svårt var att försöka få till rätt nyanser av färger vid handkolorering då jag använde mig av "LCh Color" lager i <a target="_blank" href="https://www.gimp.org/">GIMP</a>.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT200G, Grafisk design för webb.<br>
+            © Copyright William Pettersson, 2024
+        </p>
+    </footer>
+</body>
+
+</html>
