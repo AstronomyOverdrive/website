@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Startsida - Moment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div id="top-bar">
+            <a href="./"><img id="logo" src="images/logo.svg" alt="Logotyp"></a>
+            <button id="menu-btn">
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span id="btn-text">Meny</span>
+            </button>
+            <div id="darken-background" class="menu-open"></div>
+            <nav id="navigation">
+                <button id="close-btn" class="menu-open"><strong>X</strong>&nbsp;Stäng meny</button>
+                <ul>
+                    <li><a href="./">STARTSIDA</a></li>
+                    <li><a href="about.html">OM MIG</a></li>
+                    <li><a href="images.html">BILDBEHANDLING</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="height: 80px; width: 100%;"></div>
+        <div id="header-img"></div>
+    </header>
+    <!-- Page-specific content -->
+    <main>
+        <section>
+            <h1>Senaste produkterna</h1>
+            <div class="img-container" id="products">
+                <img src="images/frilaggning01.png" alt="DigiTech Hot Head">
+                <img src="images/frilaggning02.png" alt="EHX Little Big Muff">
+                <img src="images/frilaggning03.png" alt="Behringer SuperFuzz">
+            </div>
+        </section>
+        <div id="miun">
+            <div id="center-content">
+                <h2>Webbutvecklings<wbr>programmet<br>Mittuniversitetet</h2>
+                <button id="apply-btn">Sök här</button>
+            </div>
+        </div>
+        <img id="advert" src="images/reklam_banner.gif" alt="Polaroid Autofocus 660">
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT200G, Grafisk design för webb.<br>
+            © Copyright William Pettersson, 2024
+        </p>
+    </footer>
+</body>
+
+</html>
