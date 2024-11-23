@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bildbehandling - Moment 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <script src="scripts/main.js" defer></script>
+    <style>
+        /* photos.html specific styling */
+        /* Responsive design */
+        @media only screen and (min-width: 1024px) { /* For viewports over 1024px */
+            .edited { /* Processed photos */
+                width: 80%;
+                margin-left: 10%;
+            }
+            .edited > a > picture * {
+                width: 90%;
+            }
+            .edited-img {
+                margin-left: 10%;
+            }
+        }
+        @media only screen and (max-width: 1024px) { /* For viewports under 1024px */
+            .edited { /* Processed photos */
+                flex-direction: column; /* Display items vertically */
+                width: 70%;
+                margin-left: 15%;
+            }
+            .edited > a > picture * {
+                width: 100%;
+                margin-bottom: 10%;
+            }
+        }
+        @media only screen and (max-width: 600px) { /* For viewports under 600px */
+            .edited { /* Processed photos */
+                flex-direction: column;
+                width: 80%;
+                margin-left: 10%;
+            }
+            .edited > a > picture * {
+                width: 100%;
+                margin-bottom: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div id="top-bar">
+            <a href="./"><img id="logo" src="images/logo.svg" alt="Logotyp"></a>
+            <button id="menu-btn">
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span class="hamburger-symbol"></span>
+                <span id="btn-text">Meny</span>
+            </button>
+            <div id="darken-background" class="menu-open"></div>
+            <nav id="navigation">
+                <button id="close-btn" class="menu-open"><strong>X</strong>&nbsp;Stäng meny</button>
+                <ul>
+                    <li><a href="./">STARTSIDA</a></li>
+                    <li><a href="about.html">OM MIG</a></li>
+                    <li><a href="photos.html">BILDBEHANDLING</a></li>
+                </ul>
+            </nav>
+        </div>
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/header_mobile.webp">
+            <source media="(max-width: 600px)" srcset="images/header_mobile.jpg">
+            <source media="(min-width: 600px)" srcset="images/header.webp">
+            <img src="images/header.jpg" alt="">
+        </picture>
+    </header>
+    <!-- Page-specific content -->
+    <main>
+        <h1>Bildbehandling</h1>
+        <section>
+            <h2>Färgstick</h2>
+            <div id="farstick" class="img-container edited" title="Klicka för full storlek">
+                <a href="images/fargstick_fore.jpg">
+                    <picture>
+                        <source srcset="images/fargstick_fore_small.webp">
+                        <img src="images/fargstick_fore_small.jpg" alt="Färgsticks-bild före">
+                    </picture>
+                </a>
+                <a href="images/fargstick.jpg" title="Klicka för full storlek">
+                    <picture>
+                        <source srcset="images/fargstick_small.webp">
+                        <img src="images/fargstick_small.jpg" class="edited-img" alt="Färgsticks-bild före">
+                    </picture>
+                </a>
+            </div>
+        </section>
+        <section>
+            <h2>Handkolorering och retusch</h2>
+            <div id="handkolorering" class="img-container edited">
+                <a href="images/handkolorering_fore.jpg" title="Klicka för full storlek">
+                    <picture>
+                        <source srcset="images/handkolorering_fore_small.webp">
+                        <img src="images/handkolorering_fore_small.jpg" alt="Handkolorerings-bild före" loading="lazy">
+                    </picture>
+                </a>
+                <a href="images/handkolorering.jpg" title="Klicka för full storlek">
+                    <picture>
+                        <source srcset="images/handkolorering_small.webp">
+                        <img src="images/handkolorering_small.jpg" alt="Handkolorerings-bild efter" class="edited-img" loading="lazy">
+                    </picture>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT200G, Grafisk design för webb.<br>
+            © Copyright William Pettersson, 2024
+        </p>
+    </footer>
+</body>
+
+</html>
