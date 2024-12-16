@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Videobakgrund - William Pettersson</title>
+        <link href="styles/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <video id="bg-video" playsinline autoplay loop muted>
+                    <source src="video/background.webm" type="video/webm"> <!-- AV1 -->
+                    <source src="video/background.mp4" type="video/mp4"> <!-- h.264 -->
+                </video>
+                <section>
+                    <h1>Videobakgrund</h1>
+                    <p>
+                        Jag har använt mig av ett &lt;video&gt; element med <span class="format">position: absolute;</span> &amp; <span class="format">z-index: -1;</span> för att få den som en bakgrund.<br>
+                        Detta element ligger sedan centrerat i en container &lt;div&gt; med <span class="format">overflow: hidden;</span> för att den inte ska visa en scrollbar.<br>
+                        Media regler används för att välja storlek på videon.
+                    </p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

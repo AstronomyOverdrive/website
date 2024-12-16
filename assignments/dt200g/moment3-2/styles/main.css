@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+}
+
+#container {
+    position: relative; /* Allows absolute positioning within the container */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Hide video outside of the viewport */
+}
+
+#bg-video {
+    position: absolute;
+    z-index: -1; /* Keep video under the rest of the page */
+    top: 0;
+    /* Center element */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+section {
+    background: rgba(0, 0, 0, 0.7);
+    width: 70ch;
+    position: absolute;
+    padding: 10px;
+    max-width: calc(100% - 20px);
+    border-radius: 10px;
+    margin-top: 20px;
+    /* Center element */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+h1, p {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.3em;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* For monospace span showing code */
+.format {
+    background: black;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Set video size after viewport */
+@media only screen and (orientation: landscape) {
+    #bg-video {
+        width: 100vw;
+        height: auto;
+    }
+}
+@media only screen and (orientation: portrait) {
+    #bg-video {
+        height: 100vh;
+        width: auto;
+    }
+}
