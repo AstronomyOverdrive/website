@@ -1,0 +1,447 @@
+/* Import resources */
+@import url('https://williampettersson.eu/modern-normalize.min.css');
+@font-face {
+    font-family: 'Sixtyfour';
+    src: url('../assets/fonts/Sixtyfour-Regular.ttf');
+}
+@font-face {
+    font-family: 'Micro';
+    src: url('../assets/fonts/Tiny5-Regular.ttf');
+}
+
+/* General styling */
+body {
+    position: relative; /* Allows footer to be absolute relative to body */
+    min-height: 100vh; /* Used to keep footer at bottom of document */
+    font-family: 'Micro';
+    background: #d5cbb8;
+}
+main {
+    padding-bottom: 4rem; /* Leave space for footer */
+}
+button {
+    cursor: pointer;
+}
+section {
+    font-size: 1.3rem;
+}
+section > p {
+    max-width: 55ch; /* Keep lines at a readable length */
+}
+h2 {
+    margin-bottom: 0;
+}
+
+/* Header styling */
+header {
+    font-family: 'Sixtyfour';
+}
+#header-top {
+    background-color: #009ff7; /* For older browsers */
+    background-image: linear-gradient(#fd1631 0 20%, #ff7b2d 20% 40%, #f3f85d 40% 60%, #26ce48 60% 80%, #009ff7 80% 100%); /* C64-like rainbow effect */
+    text-align: center;
+    color: black;
+}
+#header-top > h1 {
+    font-size: 3rem;
+    padding: 0.5rem;
+    margin: 0;
+}
+#header-bottom {
+    background: #4e4030;
+    color: white;
+}
+header a {
+    text-decoration: none; /* Remove underline */
+}
+#header-top a {
+    color: black;
+}
+#header-bottom a {
+    color: white;
+}
+.active-indicator {
+    color: #26ce48; /* Green */
+}
+.inactive-indicator {
+    color: #4e4030; /* Same as background / hide */
+}
+nav > ul {
+    display: flex;
+    justify-content: space-around; /* Evenly space the list items */
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer styling */
+footer {
+    color: white;
+    background: #4e4030;
+    font-family: Sixtyfour;
+    text-align: center;
+    height: 3rem;
+    position: absolute; /* Used to keep footer at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+footer > p {
+    margin: 0;
+    position: relative;
+    top: 0.4rem;
+}
+
+/* Flex styling*/
+.flex-container {
+    display: flex;
+}
+.flex-box img {
+    aspect-ratio: 1 / 1;
+}
+.flex-box > p {
+    margin-top: 0;
+}
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* index.html*/
+video {
+    width: 100%;
+    margin-top: 2rem;
+    outline: 2px solid #009ff7;
+    border-radius: 10px;
+}
+
+/* receipt.html */
+#receipt {
+    position: absolute;
+}
+#receipt > h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#receipt > dl {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+dd {
+    margin-left: 1rem;
+    color: #009ff7;
+}
+
+/* products/all.html */
+.product-container > a {
+    color: black;
+    text-decoration: none; /* Remove underline */
+}
+.product-container > a:hover {
+    color: #009ff7;
+}
+.product-container > a img, #highlighted-product {
+    outline: 2px solid white;
+    border-radius: 10px;
+}
+.product-container > a:hover img, a:hover #highlighted-product {
+    outline: 2px solid #009ff7;
+}
+.product-container > a img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Product pages */
+#price {
+    color: #009ff7;
+}
+.product-description {
+    margin: 1rem;
+}
+#img1, #img2, #img3 {
+    display: block;
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 10px;
+}
+#img2, #img3 {
+    display: none; /* Hide */
+}
+#mini1, #mini2, #mini3 { /* Use a sprite sheet instead of seperate images to lower http calls */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20%;
+    position: relative;
+    aspect-ratio: 1/1;
+    display: inline-block;
+}
+#mini1 {
+    margin-left: 20%;
+    background-position: 100%;
+}
+#mini2 {
+    background-position: 0%;
+    border: 2px solid white; /* Highlight miniature matching big image */
+}
+#mini3 {
+    background-position: 50%;
+}
+
+/* checkout.html */
+#shopping-cart > div {
+    padding: 10px;
+    outline: 2px solid black;
+    border-radius: 10px;
+    display: inline-block; /* To keep outline from spanning the enire main width */
+    margin-bottom: 10px;
+}
+/* Order processing screen + pong animation */
+#confirmation { /* Put confirmation window over entire screen on top of all other elements */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #d5cbb8;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.75rem;
+}
+#pong-container {
+    position: relative;
+    aspect-ratio: 64/48;
+    background: green;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center element */
+    top: 1.75rem;
+}
+#pong-container > div {
+    position: absolute;
+    width: 2%;
+}
+#paddle1 {
+    height: 18%;
+    left: 2%;
+    background: black;
+    animation: moveP1 2s linear infinite;
+}
+#paddle2 {
+    height: 18%;
+    right: 2%;
+    background: black;
+    animation: moveP2 2s linear infinite;
+}
+#ball {
+    height: 2%;
+    background: white;
+    animation: moveBall 2s linear infinite;
+}
+@keyframes moveBall {
+    0% {
+        left: 2%;
+        top: 10%;
+    }
+    25% {
+        left: 96%;
+        top: 80%;
+    }
+    50% {
+        left: 2%;
+        top: 50%;
+    }
+    75% {
+        left: 96%;
+        top: 10%;
+    }
+    100% {
+        left: 2%;
+        top: 10%;
+    }
+}
+@keyframes moveP1 {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 40%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+@keyframes moveP2 {
+    0% {
+        top: 40%;
+    }
+    25% {
+        top: 80%;
+    }
+    50% {
+        top: 40%;
+    }
+    75% {
+        top: 0%;
+    }
+    100% {
+        top: 40%;
+    }
+}
+
+/* Responsive design */
+@media only screen and (min-width: 1024px) { /* For viewports over 1024px */
+    main {
+        width: 60%;
+        margin-left: 20%;
+    }
+    nav > ul {
+        flex-direction: row;
+    }
+    nav {
+        width: 50%;
+        margin-left: 25%;
+    }
+    nav > ul > li {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #receipt {
+        left: 50%;
+        transform: translate(-50%, 0); /* Center element */
+    }
+    #pong-container {
+        width: 20%;
+    }
+    .flex-container {
+        flex-direction: row;
+    }
+    .product-images {
+        width: 60%;
+    }
+    .product-description {
+        width: 40%;
+    }
+    #products {
+        flex-direction: row;
+    }
+    .product-container {
+        width: 30%;
+        margin: 1%;
+    }
+    .flex-box {
+        width: 45%;
+        margin-right: 10%;
+    }
+    #highlighted-product {
+        width: 90%;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 1024px) { /* For viewports under 1024px */
+    main {
+        width: 80%;
+        margin-left: 10%;
+    }
+    nav > ul {
+        flex-direction: row;
+    }
+    nav {
+        width: 100%;
+        margin-left: 0;
+    }
+    nav > ul > li {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #receipt {
+        left: 50%;
+        transform: translate(-50%, 0); /* Center element */
+    }
+    #pong-container {
+        width: 20%;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .product-images {
+        width: 100%;
+    }
+    .product-description {
+        width: 95%;
+    }
+    #products {
+        flex-direction: row;
+    }
+    .product-container {
+        width: 45%;
+        margin: 2.5%;
+    }
+    .flex-box {
+        width: 100%;
+        margin-right: 0;
+    }
+    #highlighted-product {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+@media only screen and (max-width: 600px) { /* For viewports under 600px */
+    main {
+        width: 90%;
+        margin-left: 5%;
+    }
+    nav > ul {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        margin-left: 0;
+    }
+    nav > ul > li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    #receipt {
+        left: 5%;
+        max-width: 90%;
+        transform: none;
+    }
+    #pong-container {
+        width: 70%;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .product-images {
+        width: 100%;
+    }
+    .product-description {
+        width: 90%;
+    }
+    #products {
+        flex-direction: column;
+    }
+    .product-container {
+        width: 90%;
+        margin: 5%;
+    }
+    .flex-box {
+        width: 100%;
+        margin-right: 0;
+    }
+    #highlighted-product {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/* For ultrawide monitors */
+@media only screen and (min-aspect-ratio: 21 / 9) and (min-width: 1921px) {
+    body {
+        max-width: calc(100vh * 1.777); /* Calculate what the width would be on a 16:9 monitor */
+        margin-left: calc((100% - (100vh * 1.777)) / 2); /* Center body on screen */
+    }
+}

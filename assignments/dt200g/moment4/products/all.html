@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Butik64 - Produkter</title>
+        <link rel="icon" href="../assets/images/favicon.png">
+        <link href="../style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div id="header-top">
+                <h1><a href="../">Butik64</a></h1>
+            </div>
+            <div id="header-bottom">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="all.html">
+                                <span class="active-indicator">&gt;</span>Produkter<span class="active-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about.html">
+                                <span class="inactive-indicator">&gt;</span>Information<span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../checkout.html">
+                                <span class="inactive-indicator">&gt;</span>Kassa&nbsp;<span id="cart-info">(tom)</span><span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main -->
+        <main>
+            <section>
+                <h2>Produkter:</h2>
+                <div id="products"></div> <!-- Display products here -->
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                © 2025 Butik64<br>
+                All rights reserved
+            </p>
+        </footer>
+        <script src="../script/main.js"></script>
+        <script>
+            "use strict";
+            getJSON(4); // Get available products
+        </script>
+    </body>
+</html>
+

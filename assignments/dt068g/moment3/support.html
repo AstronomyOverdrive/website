@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Färdtjänsten - Support</title>
+        <link href="style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1><a href="./">Färdtjänsten &#8962;</a></h1>
+                <div id="header-bottom">
+                    <ul>
+                        <li><a href="book.html">Boka</a></li>
+                        <li><a href="trips.html">Mina resor</a></li>
+                        <li><a href="profile.html">Profil</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="desktop-backdrop"></div>
+            <div id="breadcrumb"><a href="./">Startsida</a> &rightarrow; Online support</div>
+            <form id="form">
+                <fieldset>
+                    <legend>Kontaktformulär</legend>
+                    <div>
+                        <h2><label for="email">Din e-post adress:</label></h2>
+                        <input type="email" name="email" id="email" placeholder="exempel@domän.tld" autocomplete="email">
+                    </div>
+                    <div>
+                        <h2><label for="about">Varför du kontaktar oss:</label></h2>
+                        <input type="text" name="about" id="about" placeholder="Skriv anledning/ämne här">
+                    </div>
+                    <div>
+                        <h2><label for="message">Meddelande:</label></h2>
+                        <textarea name="message" id="message" rows="5" cols="35" placeholder="Skriv ditt meddelande här..."></textarea>
+                    </div>
+                    <div class="action-buttons">
+                        <input type="submit" value="Skicka &#128231;" style="background: lime;">
+                        <label><button type="reset" id="reset" value="reset" style="background: red;">Nollställ</button></label>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer class="black-links flex-container">
+            <section>
+                <h3>Kontakta oss:</h3>
+                <ul>
+                    <li>&#128488; <a href="support.html">Online support</a></li>
+                    <li>&#128222; <a href="tel:0707070707">070 707 07 07</a></li>
+                    <li>&#128231; <a href="mailto:kontakta@fardtjanst.se">kontakta@fardtjanst.se</a></li>
+                </ul>
+            </section>
+            <section class="flex-2">
+                <h3>Om webbplatsen:</h3>
+                <ul>
+                    <li>&#127850; <a href="cookies.html">Kakor (cookies)</a></li>
+                    <li>&nbsp;&sect;&nbsp; <a href="gdpr.html">Dataskyddsförordningen (GDPR)</a></li>
+                    <li>&#128214; <a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>

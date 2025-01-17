@@ -1,0 +1,468 @@
+/* Import resources */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://williampettersson.eu/modern-normalize.min.css');
+
+/* General styling*/
+body {
+    position: relative; /* Allows footer to be absolute relative to body */
+    min-height: 100vh; /* Used to keep footer at bottom of document */
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    margin-top: 0.2rem;
+}
+p, main * ul {
+    font-size: 1.25rem;
+}
+p, main * ul, footer * ul {
+    line-height: 1.3em;
+    max-width: 45ch; /* Keep lines of text at a readable width */
+}
+
+.black-links * a {
+    color: black;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+
+#desktop-backdrop {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background: #d9d9d9;
+    z-index: -1; /* Keep backdrop under elements */
+    left: 50%;
+    transform: translate(-50%, 0); /* Center element */
+}
+
+#breadcrumb {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-left: 0.3rem;
+    color: #757575;
+    position: relative;
+}
+#breadcrumb > a {
+    color: #757575; /* Don't change colour on links */
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: #9ad8ff;
+}
+header * a {
+    color: black;
+    text-decoration: none;
+}
+#header-bottom {
+    background: #d9d9d9;
+    box-shadow: 0px 5px 5px 0px #959595;
+}
+#header-bottom > ul {
+    display: flex;
+    justify-content: space-around; /* Evenly space the list items */
+}
+#header-bottom > ul > li {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#current-page {
+    background: #ababab;
+}
+
+/* Headings */
+h1 {
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+h3 {
+    margin-bottom: 0px;
+}
+
+/* User input */
+textarea, input, button {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: 2px solid black;
+    background: #f8f8f8;
+}
+textarea {
+    width: 100%;
+}
+.required {
+    color: red;
+}
+input[type=number] {
+    width: 3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+input[type=checkbox] {
+    height: 3rem;
+    width: 3rem;
+    appearance: none; /* Allows styling of checkboxes */
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=checkbox]:disabled {
+    background: lightgray;
+    border-color: gray;
+    cursor: not-allowed;
+}
+.checkbox {
+    position: relative; /* Allows .tick to be spaced over checkbox */
+    margin-top: 1rem;
+}
+.checkbox > label {
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+}
+.tick {
+    position: absolute;
+    font-size: 2rem;
+    width: 3rem;
+    text-align: center;
+    top: calc((3rem - 2rem) / 2);
+    display: none;
+    pointer-events: none; /* Don't block users from unchecking checkbox */
+}
+input[type=checkbox]:checked ~ .tick {
+    display: block;
+}
+#number-field > label {
+    margin-left: 1rem;
+}
+.action-buttons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Place buttons at the edges of the form */
+}
+.action-buttons > button {
+    font-size: 1.7rem;
+}
+.edit-buttons > button {
+    margin: 0.5rem;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+.center-button {
+    margin-top: 1rem;
+    text-align: center;
+}
+.center-button > button {
+    font-size: 1.7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+button {
+    cursor: pointer;
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+legend > h2 {
+    margin-bottom: -0.5rem;
+}
+
+/* index.html */
+img {
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center element */
+}
+#welcome {
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* profile.html */
+#person-nr {
+    color: dimgray;
+}
+
+/* trips.html */
+.booked-trip {
+    background: white;
+    outline: 1px solid black;
+    position: relative;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.recurring {
+    color: #757575;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+#trip-container {
+    flex-wrap: wrap;
+}
+.trip-info > div { /* Add some space between info divs */
+    margin-bottom: 5px;
+}
+
+/* Booking confirmation */
+#confirmation { /* Put confirmation window over entire screen on top of all other elements */
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: none;
+}
+#loading-container {
+    text-align: center;
+}
+#loading {
+    position: relative;
+    top: 1rem;
+    width: 10rem;
+    left: calc(50% - 5rem);
+    background: lightblue;
+    height: 1rem;
+}
+#loading-bar {
+    position: absolute;
+    width: 10%;
+    background: blue;
+    height: 1rem;
+    animation: move 2s linear infinite;
+}
+@keyframes move {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 90%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+/* Footer */
+footer {
+    background: #9ad8ff;
+    box-shadow: 0px -5px 5px 0px #959595;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer > section {
+    margin-left: 5%;
+}
+
+/* Responsive design */
+@media only screen and (min-width: 1024px) { /* For viewports over 1024px */
+    main {
+        width: 50%;
+        margin-left: 25%;
+        padding-bottom: 8rem; /* Leave space for footer */
+    }
+    #desktop-backdrop {
+        display: block;
+        width: 60%;
+    }
+    img {
+        width: 60vw;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    #welcome {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #breadcrumb {
+        left: -50%; /* Left edge of screen */
+    }
+    #header-bottom > ul {
+        width: 30%;
+        background: #c5c4c4;
+        margin-left: 35%;
+    }
+    #header-bottom > ul > li:nth-child(odd) { /* Make navigation easier to see */
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .flex-container {
+        flex-direction: row;
+    }
+    .flex-container > section {
+        max-width: 60%;
+    }
+    .flex-2 {
+        margin-left: 5rem;
+    }
+    .booked-trip {
+        width: 48.5%;
+        margin-right: 0.5rem;
+        font-size: 1.3rem;
+    }
+    .recurring {
+        font-size: 1.1rem;
+    }
+    footer {
+        height: 7rem;
+    }
+    #form {
+        width: 35rem;
+        margin-left: calc(50% - 17.5rem); /* Center */
+    }
+}
+@media only screen and (max-width: 1024px) { /* For viewports under 1024px */
+    main {
+        width: 85%;
+        margin-left: 7.5%;
+        padding-bottom: 8rem; /* Leave space for footer */
+    }
+    #desktop-backdrop {
+        display: none;
+    }
+    img {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    #welcome {
+        font-size: 2rem;
+        text-align: center;
+    }
+    #breadcrumb {
+        left: -9%; /* Left edge of screen */
+    }
+    #header-bottom > ul {
+        width: 50%;
+        background: #c5c4c4;
+        margin-left: 25%;
+    }
+    #header-bottom > ul > li:nth-child(odd) { /* Make navigation easier to see */
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .flex-container {
+        flex-direction: row;
+    }
+    .flex-container > section {
+        max-width: 55%;
+    }
+    .flex-2 {
+        margin-left: 3rem;
+    }
+    .booked-trip {
+        width: 48.5%;
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .recurring {
+        font-size: 1rem;
+    }
+    footer {
+        height: 7rem;
+    }
+    #form {
+        width: 35rem;
+        margin-left: calc(50% - 17.5rem); /* Center */
+    }
+}
+@media only screen and (max-width: 600px) { /* For viewports under 600px */
+    main {
+        width: 85%;
+        margin-left: 7.5%;
+        padding-bottom: 16rem; /* Leave space for footer */ /**/
+    }
+    #desktop-backdrop {
+        display: none;
+    }
+    img {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #welcome {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    #breadcrumb {
+        left: -9%; /* Left edge of screen */
+    }
+    #header-bottom > ul {
+        width: 100%;
+        background: #d9d9d9;
+        margin-left: 0;
+    }
+    #header-bottom > ul > li:nth-child(odd) {
+        border: none;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-container > section {
+        max-width: 100%;
+    }
+    .flex-2 {
+        margin-left: 0;
+    }
+    .booked-trip {
+        width: 100%;
+        margin-right: 0;
+        font-size: 1.0rem;
+    }
+    .recurring {
+        font-size: 1rem;
+    }
+    footer > .flex-2 {
+        margin-left: 5%;
+    }
+    footer {
+        height: 14rem;
+    }
+    #form {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* For ultrawide monitors */
+@media only screen and (min-aspect-ratio: 21 / 9) and (min-width: 1921px) {
+    body {
+        max-width: calc(100vh * 1.777); /* Calculate what the width would be on a 16:9 monitor */
+        margin-left: calc((100% - (100vh * 1.777)) / 2); /* Center body on screen */
+    }
+    img, #desktop-backdrop {
+        width: calc((100vh * 1.777) * 0.6);
+    }
+}

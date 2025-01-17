@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+            "id": "001",
+            "name": "The Legend of Zelda: Ocarina of Time",
+            "price": 250
+        },
+        {
+            "id": "002",
+            "name": "Mario Kart: Double Dash",
+            "price": 250
+        },
+        {
+            "id": "003",
+            "name": "N64 Expansion Pak",
+            "price": 200
+        },
+        {
+            "id": "004",
+            "name": "PS2 Minneskort",
+            "price": 150
+        },
+        {
+            "id": "005",
+            "name": "SNES kontroll",
+            "price": 300
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Butik64 - N64 Expansion Pak</title>
+        <link rel="icon" href="../assets/images/favicon.png">
+        <link href="../style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div id="header-top">
+                <h1><a href="../">Butik64</a></h1>
+            </div>
+            <div id="header-bottom">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="all.html">
+                                <span class="active-indicator">&gt;</span>Produkter<span class="active-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about.html">
+                                <span class="inactive-indicator">&gt;</span>Information<span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../checkout.html">
+                                <span class="inactive-indicator">&gt;</span>Kassa&nbsp;<span id="cart-info">(tom)</span><span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main -->
+        <main>
+            <div class="flex-container">
+                <div class="product-images">
+                    <!-- Carousel image -->
+                    <picture>
+                        <source srcset="../assets/images/product003_1.webp" type="image/webp">
+                        <img src="../assets/images/product003_1.jpg" alt="N64 Expansion Pak" id="img1" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/product003_2.webp" type="image/webp">
+                        <img src="../assets/images/product003_2.jpg" alt="N64 Expansion Pak" id="img2">
+                    </picture>
+                    <picture>
+                        <source srcset="../assets/images/product003_3.webp" type="image/webp">
+                        <img src="../assets/images/product003_3.jpg" alt="N64 Expansion Pak" id="img3" loading="lazy">
+                    </picture>
+                    <!-- Carousel buttons / miniatures -->
+                    <div id="mini1" onclick="cycleList(true)" style="background-image: url('../assets/images/mini003.jpg');"></div>
+                    <div id="mini2" style="background-image: url('../assets/images/mini003.jpg');"></div>
+                    <div id="mini3" onclick="cycleList(false)" style="background-image: url('../assets/images/mini003.jpg');"></div>
+                </div>
+                <section class="product-description">
+                    <h2>N64 Expansion Pak <span id="price">200:-</span></h2>
+                    <button onclick="updateCart('003', 1, true)">+</button> <span id="amount">0x</span>
+                    <p>
+                        Med Expansion Pak så dubblerar du minnet i din Nintendo 64 till 8mb som kan utnyttjas
+                        av spel för högre upplösning.<br>
+                        Krävs för att kunna spela: Donkey Kong 64, The Legend of Zelda: Majora's Mask, samt Perfect Dark.
+                    </p>
+                    <p>
+                        Alla tillbehör som säljs av oss är testade och fungerande.<br>
+                        <strong>Bilden stämmer inte alltid överens med just det exemplar du köper.</strong>
+                    </p>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                © 2025 Butik64<br>
+                All rights reserved
+            </p>
+        </footer>
+        <script src="../script/main.js"></script>
+        <script>
+            "use strict";
+            displayAmount("003"); // Get amount of the current product in the cart
+        </script>
+    </body>
+</html>
+
+

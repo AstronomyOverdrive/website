@@ -12,14 +12,14 @@
     <style>
         /* index.html specific styling */
         #miun {
-            background-color: #BBC7A3; 
+            background-color: #BBC7A3;
             background-image: url('images/background.webp');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             width: 100%;
             height: auto;
-            display: table; /* Allows vertically centering all elements in div */
+            position: relative; /* Allows absolute positioning of #center-content inside */
         }
         #center-content > h2 {
             color: white;
@@ -28,8 +28,10 @@
             line-height: 52px;
         }
         #center-content {
-            display: table-cell; 
-            vertical-align: middle; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
         }
         #apply-btn {
@@ -167,7 +169,7 @@
                 <button id="apply-btn">Sök här</button>
             </div>
         </div>
-        <video id="advert" src="images/reklam_banner.mp4" playsinline autoplay loop muted></video> 
+        <video id="advert" src="images/reklam_banner.mp4" playsinline autoplay loop muted></video>
     </main>
     <!-- Footer -->
     <footer>

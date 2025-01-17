@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Butik64 - Information</title>
+        <link rel="icon" href="assets/images/favicon.png">
+        <link href="style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div id="header-top">
+                <h1><a href="./">Butik64</a></h1>
+            </div>
+            <div id="header-bottom">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="products/all.html">
+                                <span class="inactive-indicator">&gt;</span>Produkter<span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                <span class="active-indicator">&gt;</span>Information<span class="active-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">
+                                <span class="inactive-indicator">&gt;</span>Kassa&nbsp;<span id="cart-info">(tom)</span><span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="flex-container">
+            <section class="flex-box">
+                <h2>Om webbplatsen:</h2>
+                <p>
+                    Den här webbplatsen gjordes för kursen <em>Grafisk teknik för webb</em>. Den använder sig av &lt;picture&gt; och &lt;video&gt; element
+                    med filer i olika format för att stödja så många webbläsare som möjligt medans den också använder sig av moderna format för mindre filstorlekar.
+                    Den använder sig även av bakgrundsbilder på vissa ställen för att att kunna använda en enda bildfil för flera bilder och därmed minska på antalet http anrop.
+                    Temat på webbplatsen är baserad på Commodore 64.
+                </p>
+            </section>
+            <section class="flex-box">
+                <h2>Om utvecklare:</h2>
+                <p>
+                    Webbplatsen är designad och utvecklad av studenten <a target="_blank" href="https://williampettersson.eu">William Pettersson (extern länk)</a> som även har skapat
+                    det grafiska materialet till sidan.
+                </p>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                © 2025 Butik64<br>
+                All rights reserved
+            </p>
+        </footer>
+        <script src="script/main.js"></script>
+    </body>
+</html>

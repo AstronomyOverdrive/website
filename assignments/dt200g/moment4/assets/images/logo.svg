@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="15mm"
+   viewBox="0 0 16 15"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#fd1631;fill-opacity:1;stroke-width:0.83719;stroke-dasharray:none"
+       id="rect1"
+       width="16"
+       height="3"
+       x="0"
+       y="0" />
+    <rect
+       style="fill:#ff7b2d;fill-opacity:1;stroke-width:0.916881;stroke-dasharray:none"
+       id="rect2"
+       width="16"
+       height="3"
+       x="0"
+       y="3" />
+    <rect
+       style="fill:#f3f85d;fill-opacity:1;stroke-width:0.810354;stroke-dasharray:none"
+       id="rect3"
+       width="16"
+       height="3"
+       x="0"
+       y="6" />
+    <rect
+       style="fill:#26ce48;fill-opacity:1;stroke-width:1.11674;stroke-dasharray:none"
+       id="rect4"
+       width="16"
+       height="3"
+       x="0"
+       y="9" />
+    <rect
+       style="fill:#009ff7;fill-opacity:1;stroke-width:1.346;stroke-dasharray:none"
+       id="rect5"
+       width="16"
+       height="3"
+       x="0"
+       y="12" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect6"
+       width="7"
+       height="2"
+       x="1"
+       y="2" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect7"
+       width="2"
+       height="10"
+       x="1"
+       y="3" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect8"
+       width="6"
+       height="2"
+       x="2"
+       y="6" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect9"
+       width="2"
+       height="6"
+       x="6"
+       y="7" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10"
+       width="5"
+       height="2"
+       x="2"
+       y="11" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect11"
+       width="2"
+       height="6"
+       x="9"
+       y="2" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect12"
+       width="5"
+       height="2"
+       x="10"
+       y="6" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect13"
+       width="2"
+       height="11"
+       x="13"
+       y="2" />
+  </g>
+</svg>

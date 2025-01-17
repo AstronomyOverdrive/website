@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Färdtjänsten - Bokningar</title>
+        <link href="style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1><a href="./">Färdtjänsten &#8962;</a></h1>
+                <div id="header-bottom">
+                    <ul>
+                        <li><a href="book.html">Boka</a></li>
+                        <li id="current-page"><a href="trips.html">Mina resor</a></li>
+                        <li><a href="profile.html">Profil</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="desktop-backdrop"></div>
+            <div id="breadcrumb"><a href="./">Startsida</a> &rightarrow; Mina resor</div>
+            <section>
+                <h2>Bokade resor:</h2>
+                <div id="trip-container" class="flex-container"></div>
+            </section>
+
+            <script src="script/main.js"></script>
+            <script>
+                "use strict";
+                getTrip();
+            </script>
+        </main>
+
+        <footer class="black-links flex-container">
+            <section>
+                <h3>Kontakta oss:</h3>
+                <ul>
+                    <li>&#128488; <a href="support.html">Online support</a></li>
+                    <li>&#128222; <a href="tel:0707070707">070 707 07 07</a></li>
+                    <li>&#128231; <a href="mailto:kontakta@fardtjanst.se">kontakta@fardtjanst.se</a></li>
+                </ul>
+            </section>
+            <section class="flex-2">
+                <h3>Om webbplatsen:</h3>
+                <ul>
+                    <li>&#127850; <a href="cookies.html">Kakor (cookies)</a></li>
+                    <li>&nbsp;&sect;&nbsp; <a href="gdpr.html">Dataskyddsförordningen (GDPR)</a></li>
+                    <li>&#128214; <a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>

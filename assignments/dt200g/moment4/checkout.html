@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Butik64 - Kassa</title>
+        <link rel="icon" href="assets/images/favicon.png">
+        <link href="style/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div id="header-top">
+                <h1><a href="./">Butik64</a></h1>
+            </div>
+            <div id="header-bottom">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="products/all.html">
+                                <span class="inactive-indicator">&gt;</span>Produkter<span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                <span class="inactive-indicator">&gt;</span>Information<span class="inactive-indicator">&lt;</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">
+                                <span class="active-indicator">&gt;</span>Kassa&nbsp;<span id="cart-info">(tom)</span><span class="active-indicator">&lt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main -->
+        <main>
+            <section id="checkout">
+                <h2>Kassa</h2>
+                <div id="shopping-cart"></div> <!-- Display cart here -->
+            </section>
+            <div id="confirmation">
+                <h2>Behandlar beställning...</h2>
+                Du slussas vidare<br>
+                Ladda ej om sidan
+                <div id="pong-container">
+                    <div id="paddle1"></div>
+                    <div id="paddle2"></div>
+                    <div id="ball"></div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>
+                © 2025 Butik64<br>
+                All rights reserved
+            </p>
+        </footer>
+        <script src="script/main.js"></script>
+        <script>
+            "use strict";
+            getJSON(1); // Get items in cart
+        </script>
+    </body>
+</html>
